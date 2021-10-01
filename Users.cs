@@ -29,6 +29,11 @@ namespace ConsoleApp
      cmd.Parameters.AddWithValue("@BirthDate",Convert.ToDateTime(users.BirthDate));
      cmd.Parameters.AddWithValue("@Adress",users.Adress);
      var result=cmd.ExecuteNonQuery();
+      if(result>0)
+     {
+         Console.WriteLine("Users added successfully");
+     }
+   
       }
     }
   }

@@ -21,6 +21,11 @@ namespace ConsoleApp
      cmd.Parameters.AddWithValue("@country",forms.Country);
      cmd.Parameters.AddWithValue("@gender",forms.Gender);
      var result=cmd.ExecuteNonQuery();
+       if(result>0)
+     {
+         Console.WriteLine("Forms added successfully");
+     }
+   
       }
   }
 

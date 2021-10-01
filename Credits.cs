@@ -24,6 +24,10 @@ public void Inser(SqlConnection connection,SqlTransaction transaction,Credits cr
      cmd.Parameters.AddWithValue("@balance",credits.OverdueCredit);
      
      var result=cmd.ExecuteNonQuery();
+     if(result>0)
+     {
+         Console.WriteLine("Credits added successfully");
+     }
    
       }
 }
